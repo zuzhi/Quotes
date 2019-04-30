@@ -11,6 +11,9 @@
 		FC11B5962275E20E002B88E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11B5952275E20E002B88E5 /* ViewController.swift */; };
 		FC11B5982275E20F002B88E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC11B5972275E20F002B88E5 /* Assets.xcassets */; };
 		FC11B59B2275E20F002B88E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC11B5992275E20F002B88E5 /* Main.storyboard */; };
+		FC2CAB282277F5200074CF37 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CAB272277F5200074CF37 /* Quote.swift */; };
+		FC2CAB2B2277FD9C0074CF37 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CAB2A2277FD9C0074CF37 /* EventMonitor.swift */; };
+		FC5ADD6C2276C21200C41F84 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5ADD6B2276C21200C41F84 /* QuotesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		FC11B59A2275E20F002B88E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC11B59C2275E20F002B88E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC11B59D2275E20F002B88E5 /* Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quotes.entitlements; sourceTree = "<group>"; };
+		FC2CAB272277F5200074CF37 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		FC2CAB2A2277FD9C0074CF37 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		FC5ADD6B2276C21200C41F84 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +60,40 @@
 			isa = PBXGroup;
 			children = (
 				FC11B5932275E20E002B88E5 /* AppDelegate.swift */,
-				FC11B5952275E20E002B88E5 /* ViewController.swift */,
+				FC5ADD6D2276C21B00C41F84 /* View Controllers */,
 				FC11B5972275E20F002B88E5 /* Assets.xcassets */,
 				FC11B5992275E20F002B88E5 /* Main.storyboard */,
+				FC5ADD6E2276C23800C41F84 /* Supporting Files */,
+				FC2CAB292277F5340074CF37 /* Model */,
+				FC2CAB2A2277FD9C0074CF37 /* EventMonitor.swift */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		FC2CAB292277F5340074CF37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC2CAB272277F5200074CF37 /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC5ADD6D2276C21B00C41F84 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC11B5952275E20E002B88E5 /* ViewController.swift */,
+				FC5ADD6B2276C21200C41F84 /* QuotesViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FC5ADD6E2276C23800C41F84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				FC11B59C2275E20F002B88E5 /* Info.plist */,
 				FC11B59D2275E20F002B88E5 /* Quotes.entitlements */,
 			);
-			path = Quotes;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2CAB282277F5200074CF37 /* Quote.swift in Sources */,
+				FC2CAB2B2277FD9C0074CF37 /* EventMonitor.swift in Sources */,
 				FC11B5962275E20E002B88E5 /* ViewController.swift in Sources */,
+				FC5ADD6C2276C21200C41F84 /* QuotesViewController.swift in Sources */,
 				FC11B5942275E20E002B88E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,11 +307,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Quotes/Quotes.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Quotes/Supporting Files/Quotes.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = C94U34YZYP;
-				INFOPLIST_FILE = Quotes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Quotes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -290,11 +326,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Quotes/Quotes.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Quotes/Supporting Files/Quotes.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = C94U34YZYP;
-				INFOPLIST_FILE = Quotes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Quotes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
